@@ -15,17 +15,17 @@
         <button @onclick="@(() => AppendInput("4"))">4</button>
         <button @onclick="@(() => AppendInput("5"))">5</button>
         <button @onclick="@(() => AppendInput("6"))">6</button>
-        <button @onclick="@(() => OnOperator("/"))">*</button>
+        <button @onclick="@(() => OnOperator("*"))">*</button>
 
         <button @onclick="@(() => AppendInput("1"))">1</button>
         <button @onclick="@(() => AppendInput("2"))">2</button>
         <button @onclick="@(() => AppendInput("3"))">3</button>
-        <button @onclick="@(() => OnOperator("/"))">-</button>
+        <button @onclick="@(() => OnOperator("-"))">-</button>
 
         <button @onclick="@OnClear">C</button>
         <button @onclick="@(() => AppendInput("0"))">0</button>
         <button @onclick="@(() => AppendInput(","))">,</button>
-        <button @onclick="@(() => OnOperator("/"))">+</button>
+        <button @onclick="@(() => OnOperator("+"))">+</button>
 
         <button class="equals" @onclick="@OnEquals">=</button>
     </div>
