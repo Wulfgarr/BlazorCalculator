@@ -1,5 +1,6 @@
 using BlazorCalculator.Client.Pages;
 using BlazorCalculator.Components;
+using System.Globalization;
 
 namespace BlazorCalculator
 {
@@ -8,6 +9,10 @@ namespace BlazorCalculator
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            var cultureInfo = new CultureInfo("pl-PL");
+            CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
+            CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
 
             // Add services to the container.
             builder.Services.AddRazorComponents()
